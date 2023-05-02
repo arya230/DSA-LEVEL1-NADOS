@@ -36,7 +36,13 @@ public class DigitsOfNum {
             nod++;
 
         }
-        int div = (int)Math.pow(nod - 1);
+        int div = (int)Math.pow(10, nod - 1);
+        while(div > 0) {
+            int ans = n / div;
+            System.out.println(ans);
+            n = n % div;
+            div = div / 10;
+        }
         
 
     }
